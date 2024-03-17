@@ -8,7 +8,11 @@ import { Model } from 'mongoose';
 export class UserService {
   constructor(@InjectModel('User') private userModel: Model<User>) {}
   async create(dto: CreateUserDto): Promise<User> {
-    const user = new this.userModel(dto);
-    return await user.save();
+    try {
+      const user = new this.userModel(dto);
+      return await user.save();
+    } catch (e) {
+      console.log(e.message);
+    }
   }
 }
