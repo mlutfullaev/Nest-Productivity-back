@@ -1,6 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaVersion: 2020,
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
     sourceType: 'module',
@@ -23,12 +24,15 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'warn',
       {
-        "endOfLine": "auto"
-      }
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'all',
+      },
     ],
-    "no-irregular-whitespace": "off"
+    "no-irregular-whitespace": "off",
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
 };

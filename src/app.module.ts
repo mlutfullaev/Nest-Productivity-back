@@ -6,7 +6,7 @@ import { AppController } from './app.controller';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://mhoja9494:VHUWH9uIYnq00bhl@cluster0.niereis.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0\n',
+      'mongodb+srv://mhoja9494:VHUWH9uIYnq00bhl@cluster0.niereis.mongodb.net/db?retryWrites=true&w=majority&appName=Cluster0',
     ),
     UserModule,
   ],
